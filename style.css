@@ -38,12 +38,12 @@ z-index:2;
     .capa{
 
      width:100%;
-     height:300px;
-
-background-image:url("imagem/unicv.jpg");
+     height:200px;
+margin-top: -0px;
+background-image:url("imagem/capaunicv.jpg");
 background-size:contain;
-background-position: center top;
-background-repeat: no-repeat;
+background-position: center;
+background-repeat: repeat;
 
 position:absolute;
 top: 0;
@@ -57,20 +57,7 @@ z-index:0;
     
     /* SPLASH / ONDA */
     
-    .capa::after{
-    
-    content:"";
-    position:absolute;
-    bottom:-1px;
-    left:0;
-    width:100%;
-    height:40px;
-    background:white;
-    border-radius:70% 50% 0 0;
-    
-    
-    }
-
+   
     .capa::before{
         content:"";
         position:absolute;
@@ -101,6 +88,12 @@ z-index:0;
     border-radius:30%;            /* deixa circular */
     box-shadow:0 8px 20px rgba(0,0,0,0.2);  /* leve sombra */
 }
+
+
+
+  @media (max-width: 600px) {
+   
+  }
 
     .vendedora{
 
@@ -186,7 +179,7 @@ z-index:0;
         display:grid;
         grid-template-columns:repeat(2,1fr);
         gap: 20px;
-        max-width:280px;
+        max-width:250px;
         margin: auto;
         margin-top: 20px;
         
@@ -231,16 +224,35 @@ z-index:0;
 /* RODAPÉ */
 /* ============================= */
 
-.rodape{
-    margin-top:5px;
-    padding:20px;
-    color:#666;
-    font-size:14px;
-    text-align: center;
-    }
+
     
-    .rodape i{
-    font-size:22px;
-    margin-bottom:8px;
-    display:block;
-    }  
+.rodape {
+    position: relative;           /* necessário para o QR ficar absoluto */
+    padding: 20px;
+    
+    text-align: center;           /* centraliza o texto */
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .rodape-texto {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .qr-footer {
+    position: absolute;
+    right: 2px;                  /* distancia da borda direita */
+    top: 50%;                      /* centraliza verticalmente */
+    transform: translateY(-30%);
+  }
+  
+  .qr-footer img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
