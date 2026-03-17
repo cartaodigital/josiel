@@ -256,7 +256,7 @@ z-index:0;
   
   .qr-footer {
     position: absolute;
-    right: 4px;                  /* distancia da borda direita */
+    right: 8px;                  /* distancia da borda direita */
     top: 50%;                      /* centraliza verticalmente */
     transform: translateY(-35%);
   }
